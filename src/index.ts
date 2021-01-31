@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server-express"
 import Express from "express"
 import { buildSchema } from "type-graphql"
 import { createConnection } from "typeorm"
-import { RegisterResolver } from "./modules/user/Register"
+import { RegisterResolver } from "./modules/user/register/Register"
 
 const main = async () => {
   await createConnection()

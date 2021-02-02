@@ -1,6 +1,6 @@
 import { Ctx, Query, Resolver } from "type-graphql";
 import { User } from "../../entities/User";
-import { AuthContext } from "src/types/AuthContext";
+import { AuthContext } from "../../types/AuthContext";
 
 @Resolver()
 export class CurrentUserResolver {

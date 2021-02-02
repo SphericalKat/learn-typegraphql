@@ -4,6 +4,7 @@ import Express from "express"
 import { buildSchema } from "type-graphql"
 import { createConnection } from "typeorm"
 import { RegisterResolver } from "./modules/user/register/Register"
+import logger from "./logging/logger"
 
 const main = async () => {
   await createConnection()
@@ -18,7 +19,7 @@ const main = async () => {
   apolloServer.applyMiddleware({ app })
 
   app.listen(4000, () => {
-    console.log("server started on http://localhost:4000/graphql")
+    logger.info("server started on http://localhost:4000/graphql")
   })
 }
 
